@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>About Us | OMNEX</title>
+		<link rel="stylesheet" href="/src/index.css" />
+		<script src="https://unpkg.com/lucide@latest"></script>
+	</head>
+	<body
+		class="min-h-screen bg-slate-50 font-sans text-slate-800 selection:bg-sky-200 selection:text-sky-900 overflow-x-hidden"
+	>
+		<!-- Navigation -->
+		<nav
+			class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100"
+		>
+			<div
+				class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
+			>
+				<a href="/index.html" class="flex items-center gap-2 cursor-pointer">
+					<span
+						class="font-heading font-extrabold text-3xl tracking-tight text-slate-800"
+						>OM</span
+					>
+					<div
+						class="flex items-center font-heading font-extrabold text-3xl tracking-tight"
+					>
+						<span class="text-[#34C1F1]">N</span>
+						<span class="text-[#34C1F1]">E</span>
+						<span class="text-[#0082D6] ml-[-0.05em]">X</span>
+					</div>
+				</a>
+
+				<!-- Desktop Nav -->
+				<div
+					class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600"
+				>
+					<a
+						href="/index.html#services"
+						class="hover:text-blue-600 transition-colors"
+						>Expertise</a
+					>
+					<a
+						href="/about.html"
+						class="text-blue-600 font-semibold border-b-2 border-blue-600 pb-1"
+						>About</a
+					>
+					<a
+						href="/index.html#contact"
+						class="px-5 py-2.5 bg-slate-900 text-white rounded-full hover:bg-blue-600 transition-all text-sm font-semibold"
+						>Get in Touch</a
+					>
+				</div>
+
+				<!-- Mobile Menu Toggle -->
+				<button
+					id="mobile-menu-toggle"
+					class="md:hidden p-2 text-slate-600 focus:outline-none"
+				>
+					<span id="menu-icon-container"><i data-lucide="menu"></i></span>
+				</button>
+			</div>
+
+			<!-- Mobile Nav -->
+			<div
+				id="mobile-menu"
+				class="hidden bg-white border-b border-slate-100 px-6 py-4 flex flex-col gap-4 shadow-lg transition-all"
+			>
+				<a
+					href="/index.html#services"
+					class="mobile-link py-2 text-slate-600 font-medium"
+					>Expertise</a
+				>
+				<a href="/about.html" class="mobile-link py-2 text-blue-600 font-bold"
+					>About</a
+				>
+				<a
+					href="/index.html#contact"
+					class="mobile-link py-2 mt-2 bg-slate-900 text-white text-center rounded-full font-medium"
+					>Get in Touch</a
+				>
+			</div>
+		</nav>
+
+		<!-- Hero Section -->
+		<section
+			class="pt-32 pb-20 bg-white px-6 relative border-b border-slate-100"
+		>
+			<div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+				<div
+					class="absolute top-[10%] left-[10%] w-[40%] h-[40%] rounded-full bg-gradient-to-tr from-sky-100/50 to-blue-50/50 blur-[100px]"
+				></div>
+			</div>
+			<div class="max-w-4xl mx-auto text-center fade-in-section relative z-10">
+				<span
+					class="inline-block px-3 py-1 bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold uppercase tracking-wider rounded-full mb-6"
+					>About Us</span
+				>
+				<h1
+					class="text-4xl md:text-6xl font-heading font-bold text-slate-900 mb-6 tracking-tight"
+				>
+					OMNEX Ltd.
+				</h1>
+				<p
+					class="text-xl text-slate-500 font-light leading-relaxed max-w-2xl mx-auto bg-clip-text text-transparent bg-gradient-to-r from-slate-600 to-slate-400"
+				>
+					Your Strategic Partner for Growth, Innovation, and Business Excellence
+				</p>
+			</div>
+		</section>
+
+		<!-- Introduction text -->
+		<section class="py-20 px-6 max-w-4xl mx-auto fade-in-section">
+			<div class="space-y-8 text-lg text-slate-600 leading-relaxed font-light">
+				<p>
+					<strong>OMNEX Ltd.</strong> is a modern business advisory and
+					corporate solutions firm dedicated to helping organizations navigate
+					today's evolving business landscape with confidence. We provide
+					integrated solutions across corporate advisory, accounting and
+					finance, human resources, compliance, and digital transformation,
+					enabling businesses to operate more efficiently and grow sustainably.
+				</p>
+				<p>
+					We believe that successful businesses require more than traditional
+					support services. They need strategic insights, streamlined processes,
+					smart technology, and trusted advisors who understand their goals. By
+					combining industry expertise with innovative solutions, including
+					AI-powered tools and process automation, we help businesses improve
+					performance, strengthen governance, and unlock new opportunities for
+					growth.
+				</p>
+				<p>
+					Our team works closely with startups, SMEs, and established
+					enterprises to deliver practical, scalable, and results-driven
+					solutions tailored to their unique needs. From company incorporation
+					and financial management to HR administration, compliance, and
+					business transformation, OMNEX serves as a reliable partner throughout
+					every stage of the business journey.
+				</p>
+			</div>
+		</section>
+
+		<!-- Mission & Vision -->
+		<section class="py-20 bg-slate-900 text-white px-6">
+			<div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 fade-in-section">
+				<div class="p-8 bg-slate-800/50 rounded-3xl border border-slate-700/50">
+					<div
+						class="w-12 h-12 bg-sky-500/20 rounded-xl flex items-center justify-center mb-6 text-sky-400"
+					>
+						<i data-lucide="target" class="w-6 h-6"></i>
+					</div>
+					<h3 class="text-2xl font-heading font-bold mb-4">Our Mission</h3>
+					<p class="text-slate-300 leading-relaxed font-light">
+						To empower businesses with strategic expertise, innovative
+						technology, and integrated solutions that drive sustainable growth
+						and operational excellence.
+					</p>
+				</div>
+				<div class="p-8 bg-slate-800/50 rounded-3xl border border-slate-700/50">
+					<div
+						class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-blue-400"
+					>
+						<i data-lucide="eye" class="w-6 h-6"></i>
+					</div>
+					<h3 class="text-2xl font-heading font-bold mb-4">Our Vision</h3>
+					<p class="text-slate-300 leading-relaxed font-light">
+						To be a trusted regional leader in business advisory and
+						transformation, helping organizations build resilient, future-ready
+						enterprises.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- What Sets Us Apart -->
+		<section class="py-24 px-6 bg-white relative">
+			<div class="max-w-6xl mx-auto fade-in-section">
+				<h2
+					class="text-3xl md:text-4xl font-heading font-bold text-center mb-16 text-slate-900"
+				>
+					What Sets Us Apart
+				</h2>
+				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<div
+						class="p-8 rounded-3xl border border-slate-100 hover:border-blue-100 hover:shadow-lg hover:shadow-blue-50 transition-all bg-slate-50 group"
+					>
+						<div
+							class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform"
+						>
+							<i data-lucide="layers" class="w-6 h-6"></i>
+						</div>
+						<h4 class="font-bold text-slate-900 mb-3 text-xl">
+							Comprehensive Solutions
+						</h4>
+						<p class="text-slate-500 leading-relaxed">
+							One-Stop business solutions for all your needs from one single
+							reliable partner.
+						</p>
+					</div>
+					<div
+						class="p-8 rounded-3xl border border-slate-100 hover:border-blue-100 hover:shadow-lg hover:shadow-blue-50 transition-all bg-slate-50 group"
+					>
+						<div
+							class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform"
+						>
+							<i data-lucide="lightbulb" class="w-6 h-6"></i>
+						</div>
+						<h4 class="font-bold text-slate-900 mb-3 text-xl">
+							Strategic & Forward-Thinking
+						</h4>
+						<p class="text-slate-500 leading-relaxed">
+							Advisory that goes beyond the basics to actively plan your future
+							growth.
+						</p>
+					</div>
+					<div
+						class="p-8 rounded-3xl border border-slate-100 hover:border-blue-100 hover:shadow-lg hover:shadow-blue-50 transition-all bg-slate-50 group"
+					>
+						<div
+							class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform"
+						>
+							<i data-lucide="cpu" class="w-6 h-6"></i>
+						</div>
+						<h4 class="font-bold text-slate-900 mb-3 text-xl">
+							AI-Driven Services
+						</h4>
+						<p class="text-slate-500 leading-relaxed">
+							Technology-enabled solutions unlocking unparalleled speed and
+							accuracy.
+						</p>
+					</div>
+					<div
+						class="p-8 rounded-3xl border border-slate-100 hover:border-blue-100 hover:shadow-lg hover:shadow-blue-50 transition-all bg-slate-50 group"
+					>
+						<div
+							class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform"
+						>
+							<i data-lucide="shield-check" class="w-6 h-6"></i>
+						</div>
+						<h4 class="font-bold text-slate-900 mb-3 text-xl">
+							Strong Compliance
+						</h4>
+						<p class="text-slate-500 leading-relaxed">
+							A rigorous focus on governance, minimizing risk for your
+							enterprise.
+						</p>
+					</div>
+					<div
+						class="p-8 rounded-3xl border border-slate-100 hover:border-blue-100 hover:shadow-lg hover:shadow-blue-50 transition-all bg-slate-50 group"
+					>
+						<div
+							class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform"
+						>
+							<i data-lucide="activity" class="w-6 h-6"></i>
+						</div>
+						<h4 class="font-bold text-slate-900 mb-3 text-xl">
+							Practical & Measurable
+						</h4>
+						<p class="text-slate-500 leading-relaxed">
+							Real solutions with verifiable results to improve the bottom line.
+						</p>
+					</div>
+					<div
+						class="p-8 rounded-3xl border border-slate-100 hover:border-blue-100 hover:shadow-lg hover:shadow-blue-50 transition-all bg-slate-50 group"
+					>
+						<div
+							class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform"
+						>
+							<i data-lucide="users" class="w-6 h-6"></i>
+						</div>
+						<h4 class="font-bold text-slate-900 mb-3 text-xl">
+							Personalized Support
+						</h4>
+						<p class="text-slate-500 leading-relaxed">
+							Dedicated long-term partnership matching your unique business
+							cadence.
+						</p>
+					</div>
+				</div>
+
+				<div
+					class="mt-16 p-8 md:p-12 bg-blue-50/50 rounded-3xl border border-blue-100 text-center"
+				>
+					<p
+						class="text-xl md:text-2xl text-slate-700 font-medium max-w-4xl mx-auto leading-relaxed"
+					>
+						"At OMNEX Ltd., we are committed to helping businesses transform
+						challenges into opportunities and achieve lasting success in an
+						increasingly dynamic world."
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Services Detailed Breakdown -->
+		<section class="py-24 bg-slate-50 px-6 border-t border-slate-100">
+			<div class="max-w-7xl mx-auto fade-in-section">
+				<div class="text-center mb-16">
+					<h2
+						class="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-4"
+					>
+						One-Stop Strategic Business Solutions
+					</h2>
+					<p class="text-lg text-slate-500 max-w-2xl mx-auto">
+						Explore our specialized practices designed to drive efficiency.
+					</p>
+				</div>
+
+				<div class="grid md:grid-cols-2 gap-8">
+					<!-- Column 1 -->
+					<div
+						class="bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-sm"
+					>
+						<h3
+							class="text-2xl font-heading font-bold text-slate-900 mb-6 flex items-center gap-3"
+						>
+							<i data-lucide="cpu" class="text-blue-500"></i> Corporate &amp;
+							Digital Transformation
+						</h3>
+						<ul class="space-y-4 text-slate-600">
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								Corporate Advisory &amp; Business Structuring
+							</li>
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								Financial Strategy &amp; Advisory
+							</li>
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								AI-Powered Accounting Solutions
+							</li>
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								SOP Design &amp; Process Excellence
+							</li>
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								Workflow Automation Systems
+							</li>
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								Smart Business Intelligence Tools
+							</li>
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								Digital Transformation Consulting
+							</li>
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								Operational Efficiency Enhancement
+							</li>
+						</ul>
+					</div>
+
+					<!-- Column 2 -->
+					<div
+						class="bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-sm"
+					>
+						<h3
+							class="text-2xl font-heading font-bold text-slate-900 mb-6 flex items-center gap-3"
+						>
+							<i data-lucide="pie-chart" class="text-blue-500"></i> Accounting
+							&amp; Financial Management
+						</h3>
+						<ul class="space-y-4 text-slate-600">
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								Accounting &amp; Bookkeeping Services
+							</li>
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								Management Reporting &amp; Analysis
+							</li>
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								Financial Statements &amp; Reporting
+							</li>
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								Cash Flow Planning &amp; Monitoring
+							</li>
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								Budgeting &amp; Financial Forecasting
+							</li>
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								E-Invoicing Implementation &amp; Compliance
+							</li>
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								Financial Performance Insights
+							</li>
+						</ul>
+					</div>
+
+					<!-- Column 3 -->
+					<div
+						class="bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-sm"
+					>
+						<h3
+							class="text-2xl font-heading font-bold text-slate-900 mb-6 flex items-center gap-3"
+						>
+							<i data-lucide="users-2" class="text-blue-500"></i> Human Capital
+							&amp; Payroll Solutions
+						</h3>
+						<ul class="space-y-4 text-slate-600">
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								End-to-End Payroll Administration
+							</li>
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								EPF, SOCSO &amp; EIS Compliance Management
+							</li>
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								Employment &amp; HR Advisory
+							</li>
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								HR Policies, Contracts &amp; Documentation
+							</li>
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								Foreign Worker Administration &amp; Compliance
+							</li>
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								Workforce Management Support
+							</li>
+						</ul>
+					</div>
+
+					<!-- Column 4 -->
+					<div
+						class="bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-sm"
+					>
+						<h3
+							class="text-2xl font-heading font-bold text-slate-900 mb-6 flex items-center gap-3"
+						>
+							<i data-lucide="gavel" class="text-blue-500"></i> Business Growth
+							&amp; Governance Advisory
+						</h3>
+						<ul class="space-y-4 text-slate-600">
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								Strategic Business Planning
+							</li>
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								Growth &amp; Expansion Advisory
+							</li>
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								SME Development Consulting
+							</li>
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								Process Improvement &amp; Optimization
+							</li>
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								Company Incorporation &amp; Corporate Setup
+							</li>
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								Business Licensing &amp; Regulatory Support
+							</li>
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								Compliance &amp; Risk Management
+							</li>
+							<li class="flex items-start gap-3">
+								<i
+									data-lucide="check-circle-2"
+									class="w-5 h-5 text-sky-400 shrink-0 mt-0.5"
+								></i>
+								Internal Controls &amp; Governance Frameworks
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer
+			id="contact"
+			class="bg-white border-t border-slate-100 pt-16 pb-8 px-6"
+		>
+			<div class="max-w-7xl mx-auto">
+				<div class="grid md:grid-cols-4 gap-12 mb-16 fade-in-section">
+					<div class="md:col-span-2">
+						<a href="/index.html" class="flex items-center gap-2 mb-6">
+							<span
+								class="font-heading font-extrabold text-2xl tracking-tight text-slate-800"
+								>OM</span
+							>
+							<div
+								class="flex items-center font-heading font-extrabold text-2xl tracking-tight"
+							>
+								<span class="text-[#34C1F1]">N</span>
+								<span class="text-[#34C1F1]">E</span>
+								<span class="text-[#0082D6] ml-[-0.05em]">X</span>
+							</div>
+						</a>
+						<p class="text-slate-500 max-w-sm">
+							Your one-stop partner for corporate services, strategic growth,
+							and functional excellence.
+						</p>
+					</div>
+					<div>
+						<h4 class="font-bold text-slate-900 mb-4">Solutions</h4>
+						<ul class="space-y-3 text-slate-500 text-sm">
+							<li>
+								<a
+									href="/index.html#services"
+									class="hover:text-blue-600 transition-colors"
+									>Corporate Advisory</a
+								>
+							</li>
+							<li>
+								<a
+									href="/index.html#services"
+									class="hover:text-blue-600 transition-colors"
+									>Accounting &amp; Finance</a
+								>
+							</li>
+							<li>
+								<a
+									href="/index.html#services"
+									class="hover:text-blue-600 transition-colors"
+									>HR &amp; Payroll</a
+								>
+							</li>
+							<li>
+								<a
+									href="/index.html#services"
+									class="hover:text-blue-600 transition-colors"
+									>Business Strategy</a
+								>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h4 class="font-bold text-slate-900 mb-4">Contact</h4>
+						<ul class="space-y-3 text-slate-500 text-sm">
+							<li>hello@omnex.com</li>
+							<li>+60 123 456 789</li>
+							<li>Kuala Lumpur, Malaysia</li>
+						</ul>
+					</div>
+				</div>
+				<div
+					class="border-t border-slate-100 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-400"
+				>
+					<p>&copy; 2026 OMNEX. All rights reserved.</p>
+					<div class="flex gap-6">
+						<a href="#" class="hover:text-slate-600 transition-colors"
+							>Privacy Policy</a
+						>
+						<a href="#" class="hover:text-slate-600 transition-colors"
+							>Terms of Service</a
+						>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Main JS logic -->
+		<script type="module" src="/src/main.ts"></script>
+	</body>
+</html>

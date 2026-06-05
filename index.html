@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>OMNEX | One Stop Strategic Solutions</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+		<style type="text/tailwindcss">
+			@theme {
+				--font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+				--font-heading: "Plus Jakarta Sans", ui-sans-serif, system-ui,
+					sans-serif;
+			}
+		</style>
+		<style>
+			.fade-in-section {
+				opacity: 1;
+				transform: translateY(0);
+				transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+			}
+
+			.fade-in-section.is-visible {
+				opacity: 1;
+				transform: translateY(0);
+			}
+
+			@keyframes blob-float-one {
+				0%,
+				100% {
+					transform: translate3d(0, 0, 0) scale(1);
+				}
+				50% {
+					transform: translate3d(-100%, 100%, 0) scale(1.2);
+				}
+			}
+
+			@keyframes blob-float-two {
+				0%,
+				100% {
+					transform: translate3d(0, 0, 0) scale(1);
+				}
+				50% {
+					transform: translate3d(2%, -1.5%, 0) scale(1.5);
+				}
+			}
+
+			.blob-float-one {
+				animation: blob-float-one 10s ease-in-out infinite alternate;
+			}
+
+			.blob-float-two {
+				animation: blob-float-two 22s ease-in-out infinite alternate;
+			}
+		</style>
+		<script src="https://unpkg.com/lucide@latest"></script>
+	</head>
+	<body
+		class="min-h-screen bg-white font-sans text-slate-800 selection:bg-sky-200 selection:text-sky-900 overflow-x-hidden"
+	>
+		<!-- Navigation -->
+		<nav
+			class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100"
+		>
+			<div
+				class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
+			>
+				<a href="#" class="block shrink-0" aria-label="OMNEX home">
+					<img
+						src="assets/omnex_CMYK.png"
+						alt="OMNEX"
+						class="h-7 w-auto object-contain md:h-9"
+					/>
+				</a>
+
+				<!-- Desktop Nav -->
+				<div
+					class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600"
+				>
+					<a href="#services" class="hover:text-blue-600 transition-colors"
+						>Expertise</a
+					>
+					<a href="#about" class="hover:text-blue-600 transition-colors"
+						>About</a
+					>
+					<!-- <a
+						href="#contact"
+						class="px-5 py-2.5 bg-slate-900 text-white rounded-full hover:bg-blue-600 transition-all text-sm font-semibold"
+						>Get in Touch</a
+					> -->
+				</div>
+
+				<!-- Mobile Menu Toggle -->
+				<button
+					id="mobile-menu-toggle"
+					class="md:hidden p-2 text-slate-600 focus:outline-none"
+				>
+					<span id="menu-icon-container"><i data-lucide="menu"></i></span>
+				</button>
+			</div>
+
+			<!-- Mobile Nav -->
+			<div
+				id="mobile-menu"
+				class="hidden bg-white border-b border-slate-100 px-6 py-4 flex flex-col gap-4 shadow-lg transition-all"
+			>
+				<a href="#services" class="mobile-link py-2 text-slate-600 font-medium"
+					>Expertise</a
+				>
+				<a href="#about" class="mobile-link py-2 text-slate-600 font-medium"
+					>About</a
+				>
+				<!-- <a
+					href="#contact"
+					class="mobile-link py-2 mt-2 bg-slate-900 text-white text-center rounded-full font-medium"
+					>Get in Touch</a
+				> -->
+			</div>
+		</nav>
+
+		<!-- Hero Section -->
+		<section class="relative pt-32 pb-20 md:pt-48 md:pb-32 px-6">
+			<div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+				<div
+					class="blob-float-one absolute -top-[20%] -right-[10%] w-[60%] h-[60%] rounded-full bg-gradient-to-br from-sky-200/40 to-blue-400/20 blur-[100px]"
+				></div>
+				<div
+					class="blob-float-two absolute top-[40%] -left-[10%] w-[50%] h-[50%] rounded-full bg-gradient-to-tr from-slate-200/50 to-sky-100/30 blur-[100px]"
+				></div>
+			</div>
+			<div class="max-w-4xl mx-auto text-center relative z-10 fade-in-section">
+				<span
+					class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-semibold uppercase tracking-wider mb-8"
+				>
+					<span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+					One Stop Strategic Solutions
+				</span>
+				<h1
+					class="text-5xl md:text-7xl font-heading font-bold text-slate-900 tracking-tight leading-[1.1] mb-6"
+				>
+					Transforming business <br class="hidden md:block" />
+					<span
+						class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600"
+					>
+						through intelligence
+					</span>
+				</h1>
+				<p
+					class="text-lg md:text-xl text-slate-500 mb-10 max-w-2xl mx-auto font-light leading-relaxed"
+				>
+					We empower modern enterprises with comprehensive advisory, seamless
+					financial management, and AI-driven corporate solutions tailored for
+					growth.
+				</p>
+				<div
+					class="flex flex-col sm:flex-row items-center justify-center gap-4"
+				>
+					<button
+						class="group relative w-full sm:w-auto px-8 py-4 bg-slate-900 text-white rounded-full font-semibold overflow-hidden transition-shadow shadow-sm hover:shadow-lg hover:shadow-blue-500/20 flex items-center justify-center gap-2"
+					>
+						<span
+							class="absolute inset-x-0 bottom-0 h-full bg-blue-600 translate-y-full transition-transform duration-300 ease-out group-hover:translate-y-0"
+						></span>
+						<span class="relative z-10 flex items-center justify-center gap-2">
+							Start Growing <i data-lucide="arrow-right" class="w-4 h-4"></i>
+						</span>
+					</button>
+					<a
+						href="#services"
+						class="group relative w-full sm:w-auto px-8 py-4 bg-white text-slate-700 border border-slate-200 rounded-full font-semibold overflow-hidden transition-shadow shadow-sm hover:shadow-md text-center"
+					>
+						<span
+							class="absolute inset-x-0 bottom-0 h-full bg-slate-50 translate-y-full transition-transform duration-300 ease-out group-hover:translate-y-0"
+						></span>
+						<span class="relative z-10">Explore Services</span>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Services Section -->
+		<section id="services" class="py-20 md:py-32 bg-slate-50 px-6 relative">
+			<div class="max-w-7xl mx-auto">
+				<div class="text-center mb-16 md:mb-24 fade-in-section">
+					<h2
+						class="text-3xl md:text-5xl font-heading font-bold text-slate-900 mb-6"
+					>
+						Comprehensive Expertise
+					</h2>
+					<p class="text-slate-500 text-lg max-w-2xl mx-auto">
+						A unified approach to business operations. From daily bookkeeping to
+						strategic AI integration, we cover all bases.
+					</p>
+				</div>
+
+				<div class="grid md:grid-cols-2 gap-6 md:gap-8">
+					<!-- Service 1 -->
+					<div
+						class="p-8 md:p-10 bg-white rounded-3xl border border-blue-100 shadow-sm hover:shadow-md transition-shadow h-full flex flex-col group fade-in-section"
+						style="transition-delay: 0.1s"
+					>
+						<div class="mb-5">
+							<img
+								src="assets/omnex_RGB-02.png"
+								alt=""
+								class="w-20 h-20 object-contain -ml-3"
+							/>
+						</div>
+						<h3 class="text-2xl font-bold font-heading text-slate-900 mb-3">
+							Corporate Services
+						</h3>
+						<p class="text-slate-500 mb-8 leading-relaxed flex-grow">
+							Modernize operations with intelligent, digital-first strategies.
+						</p>
+						<ul class="space-y-3">
+							<li class="flex items-start gap-3">
+								<img
+									src="assets/icon_left.png"
+									alt=""
+									class="w-5 h-5 object-contain shrink-0 mt-0.5"
+								/>
+								<span class="text-slate-700 font-medium">AI Accounting</span>
+							</li>
+							<li class="flex items-start gap-3">
+								<img
+									src="assets/icon_left.png"
+									alt=""
+									class="w-5 h-5 object-contain shrink-0 mt-0.5"
+								/>
+								<span class="text-slate-700 font-medium"
+									>Automation SOP System</span
+								>
+							</li>
+							<li class="flex items-start gap-3">
+								<img
+									src="assets/icon_left.png"
+									alt=""
+									class="w-5 h-5 object-contain shrink-0 mt-0.5"
+								/>
+								<span class="text-slate-700 font-medium"
+									>Smart Advisory Tools</span
+								>
+							</li>
+							<li class="flex items-start gap-3">
+								<img
+									src="assets/icon_left.png"
+									alt=""
+									class="w-5 h-5 object-contain shrink-0 mt-0.5"
+								/>
+								<span class="text-slate-700 font-medium"
+									>Digital Transformation</span
+								>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Service 2 -->
+					<div
+						class="p-8 md:p-10 bg-white rounded-3xl border border-sky-100 shadow-sm hover:shadow-md transition-shadow h-full flex flex-col group fade-in-section"
+						style="transition-delay: 0.2s"
+					>
+						<div class="mb-5">
+							<img
+								src="assets/omnex_RGB-03.png"
+								alt=""
+								class="w-20 h-20 object-contain -ml-3"
+							/>
+						</div>
+						<h3 class="text-2xl font-bold font-heading text-slate-900 mb-3">
+							Accounting & Finance
+						</h3>
+						<p class="text-slate-500 mb-8 leading-relaxed flex-grow">
+							Clear, compliant, and strategic financial management.
+						</p>
+						<ul class="space-y-3">
+							<li class="flex items-start gap-3">
+								<img
+									src="assets/icon_left.png"
+									alt=""
+									class="w-5 h-5 object-contain shrink-0 mt-0.5"
+								/>
+								<span class="text-slate-700 font-medium"
+									>Bookkeeping & Reporting</span
+								>
+							</li>
+							<li class="flex items-start gap-3">
+								<img
+									src="assets/icon_left.png"
+									alt=""
+									class="w-5 h-5 object-contain shrink-0 mt-0.5"
+								/>
+								<span class="text-slate-700 font-medium"
+									>Management Accounts</span
+								>
+							</li>
+							<li class="flex items-start gap-3">
+								<img
+									src="assets/icon_left.png"
+									alt=""
+									class="w-5 h-5 object-contain shrink-0 mt-0.5"
+								/>
+								<span class="text-slate-700 font-medium"
+									>Cash Flow & Budgets</span
+								>
+							</li>
+							<li class="flex items-start gap-3">
+								<img
+									src="assets/icon_left.png"
+									alt=""
+									class="w-5 h-5 object-contain shrink-0 mt-0.5"
+								/>
+								<span class="text-slate-700 font-medium">E-Invoicing</span>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Service 3 -->
+					<div
+						class="p-8 md:p-10 bg-white rounded-3xl border border-indigo-100 shadow-sm hover:shadow-md transition-shadow h-full flex flex-col group fade-in-section"
+						style="transition-delay: 0.3s"
+					>
+						<div class="mb-5">
+							<img
+								src="assets/omnex_RGB-04.png"
+								alt=""
+								class="w-20 h-20 object-contain -ml-3"
+							/>
+						</div>
+						<h3 class="text-2xl font-bold font-heading text-slate-900 mb-3">
+							HR & Payroll
+						</h3>
+						<p class="text-slate-500 mb-8 leading-relaxed flex-grow">
+							Streamline your workforce management with complete compliance.
+						</p>
+						<ul class="space-y-3">
+							<li class="flex items-start gap-3">
+								<img
+									src="assets/icon_left.png"
+									alt=""
+									class="w-5 h-5 object-contain shrink-0 mt-0.5"
+								/>
+								<span class="text-slate-700 font-medium"
+									>Payroll Management</span
+								>
+							</li>
+							<li class="flex items-start gap-3">
+								<img
+									src="assets/icon_left.png"
+									alt=""
+									class="w-5 h-5 object-contain shrink-0 mt-0.5"
+								/>
+								<span class="text-slate-700 font-medium"
+									>EPF / SOCSO / EIS</span
+								>
+							</li>
+							<li class="flex items-start gap-3">
+								<img
+									src="assets/icon_left.png"
+									alt=""
+									class="w-5 h-5 object-contain shrink-0 mt-0.5"
+								/>
+								<span class="text-slate-700 font-medium"
+									>Employment Advisory</span
+								>
+							</li>
+							<li class="flex items-start gap-3">
+								<img
+									src="assets/icon_left.png"
+									alt=""
+									class="w-5 h-5 object-contain shrink-0 mt-0.5"
+								/>
+								<span class="text-slate-700 font-medium"
+									>Foreign Worker Admin</span
+								>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Service 4 -->
+					<div
+						class="p-8 md:p-10 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow h-full flex flex-col group fade-in-section"
+						style="transition-delay: 0.4s"
+					>
+						<div class="mb-5">
+							<img
+								src="assets/omnex_RGB-05.png"
+								alt=""
+								class="w-20 h-20 object-contain -ml-3"
+							/>
+						</div>
+						<h3 class="text-2xl font-bold font-heading text-slate-900 mb-3">
+							Business Advisory
+						</h3>
+						<p class="text-slate-500 mb-8 leading-relaxed flex-grow">
+							Strategic planning to scale your business safely and efficiently.
+						</p>
+						<ul class="space-y-3">
+							<li class="flex items-start gap-3">
+								<img
+									src="assets/icon_left.png"
+									alt=""
+									class="w-5 h-5 object-contain shrink-0 mt-0.5"
+								/>
+								<span class="text-slate-700 font-medium"
+									>Growth & SME Advisory</span
+								>
+							</li>
+							<li class="flex items-start gap-3">
+								<img
+									src="assets/icon_left.png"
+									alt=""
+									class="w-5 h-5 object-contain shrink-0 mt-0.5"
+								/>
+								<span class="text-slate-700 font-medium"
+									>Company Incorporation</span
+								>
+							</li>
+							<li class="flex items-start gap-3">
+								<img
+									src="assets/icon_left.png"
+									alt=""
+									class="w-5 h-5 object-contain shrink-0 mt-0.5"
+								/>
+								<span class="text-slate-700 font-medium"
+									>Compliance & Licenses</span
+								>
+							</li>
+							<li class="flex items-start gap-3">
+								<img
+									src="assets/icon_left.png"
+									alt=""
+									class="w-5 h-5 object-contain shrink-0 mt-0.5"
+								/>
+								<span class="text-slate-700 font-medium"
+									>Internal Controls</span
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- About Snippet Section -->
+		<section id="about" class="py-24 bg-white px-6">
+			<div class="max-w-7xl mx-auto">
+				<div class="grid md:grid-cols-2 gap-12 items-center fade-in-section">
+					<div>
+						<span
+							class="inline-block px-3 py-1 bg-slate-50 border border-slate-200 text-slate-600 text-xs font-bold uppercase tracking-wider rounded-full mb-6"
+							>About Us</span
+						>
+						<h2
+							class="text-3xl md:text-5xl font-heading font-bold text-slate-900 mb-6 leading-tight"
+						>
+							Your Strategic Partner for Growth &amp; Innovation
+						</h2>
+						<p class="text-lg text-slate-500 mb-6 leading-relaxed">
+							OMNEX Sdn. Bhd. is a modern business advisory and corporate
+							solutions firm dedicated to helping organizations navigate today's
+							evolving business landscape with confidence.
+						</p>
+						<p class="text-lg text-slate-500 mb-8 leading-relaxed">
+							We provide integrated solutions across corporate advisory,
+							accounting and finance, human resources, compliance, and digital
+							transformation, enabling businesses to operate more efficiently
+							and grow sustainably.
+						</p>
+					<a
+						href="about.html"
+						class="group relative inline-flex items-center gap-2 px-8 py-4 bg-slate-900 text-white rounded-full font-semibold overflow-hidden transition-shadow shadow-sm hover:shadow-lg hover:shadow-blue-500/20"
+					>
+						<span
+							class="absolute inset-x-0 bottom-0 h-full bg-blue-600 translate-y-full transition-transform duration-300 ease-out group-hover:translate-y-0"
+						></span>
+						<span class="relative z-10 inline-flex items-center gap-2">
+							Discover More About Us
+							<i data-lucide="arrow-right" class="w-4 h-4"></i>
+						</span>
+					</a>
+					</div>
+					<div class="group relative hidden md:block">
+						<div
+							class="absolute inset-0 bg-gradient-to-tr from-sky-100 to-blue-50 rounded-3xl transform rotate-3 scale-105 origin-center transition-transform duration-500 ease-out group-hover:rotate-6 group-hover:scale-[1.08] -z-10"
+						></div>
+						<div
+							class="rounded-3xl shadow-lg h-[500px] w-full bg-white border border-slate-100 p-8 flex flex-col items-center justify-center text-center gap-10 transition-transform duration-500 ease-out group-hover:-translate-y-1"
+							aria-label="OMNEX advisory capability preview"
+						>
+							<div class="max-w-xl">
+								<img
+									src="assets/omnex_RGB-06.png"
+									alt=""
+									class="mx-auto mb-4 h-30 w-30 object-contain"
+								/>
+								<h3
+									class="text-3xl font-heading font-bold text-slate-900 leading-tight mb-0"
+								>
+									Integrated business advisory, built for operators.
+								</h3>
+							</div>
+							<div class="grid w-full max-w-md grid-cols-2 gap-4">
+								<div
+									class="p-4 rounded-2xl bg-slate-50 border border-slate-100 text-left"
+								>
+									<span
+										class="block text-xl font-heading font-bold text-blue-600"
+										>END-TO-END</span
+									>
+									<span
+										class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mt-1"
+										>BUSINESS SUPPORT</span
+									>
+								</div>
+								<div
+									class="p-4 rounded-2xl bg-slate-50 border border-slate-100 text-left"
+								>
+									<span class="text-2xl font-heading font-bold text-sky-500"
+										>AI</span
+									>
+									<p
+										class="text-xs font-semibold uppercase tracking-wider text-slate-500 mt-1"
+									>
+										Enabled Tools
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Content / CTA Section -->
+		<section class="py-24 px-6 relative overflow-hidden">
+			<div class="absolute inset-0 bg-slate-900"></div>
+			<div
+				class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-blue-600/30 to-transparent blur-3xl opacity-50"
+			></div>
+
+			<div
+				class="max-w-4xl mx-auto text-center relative z-10 text-white fade-in-section"
+			>
+				<i
+					data-lucide="building-2"
+					class="w-20 h-20 text-sky-400 mx-auto mb-8 opacity-80"
+				></i>
+				<h2 class="text-3xl md:text-5xl font-heading font-bold mb-6">
+					A Modern Consultancy Experience
+				</h2>
+				<p
+					class="text-slate-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light"
+				>
+					We replace outdated paperwork with smart systems, clear reporting, and
+					proactive strategy. Your business deserves an advisory partner built
+					for the future.
+				</p>
+				<a
+					href="mailto:hello@omnex.my?subject=Schedule%20a%20Consultation%20with%20OMNEX"
+					class="group relative inline-flex w-fit min-w-64 px-8 py-4 bg-white text-slate-900 rounded-full font-bold overflow-hidden transition-shadow shadow-sm hover:shadow-lg hover:shadow-sky-400/20 items-center justify-center gap-2 mx-auto"
+				>
+					<span
+						class="absolute inset-x-0 bottom-0 h-full bg-sky-400 translate-y-full transition-transform duration-300 ease-out group-hover:translate-y-0"
+					></span>
+					<span class="relative z-10">Schedule a Consultation</span>
+				</a>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer
+			id="contact"
+			class="bg-white border-t border-slate-100 pt-16 pb-8 px-6"
+		>
+			<div class="max-w-7xl mx-auto">
+				<div class="grid md:grid-cols-4 gap-12 mb-16 fade-in-section">
+					<div class="md:col-span-2">
+						<img
+							src="assets/omnex_CMYK.png"
+							alt="OMNEX"
+							class="mb-6 h-10 w-auto object-contain"
+						/>
+						<p class="text-slate-500 max-w-sm">
+							Your one-stop partner for corporate services, strategic growth,
+							and functional excellence.
+						</p>
+					</div>
+					<div>
+						<h4 class="font-bold text-slate-900 mb-4">Solutions</h4>
+						<ul class="space-y-3 text-slate-500 text-sm">
+							<li>
+								<a href="#" class="hover:text-blue-600 transition-colors"
+									>Corporate Advisory</a
+								>
+							</li>
+							<li>
+								<a href="#" class="hover:text-blue-600 transition-colors"
+									>Accounting & Finance</a
+								>
+							</li>
+							<li>
+								<a href="#" class="hover:text-blue-600 transition-colors"
+									>HR & Payroll</a
+								>
+							</li>
+							<li>
+								<a href="#" class="hover:text-blue-600 transition-colors"
+									>Business Strategy</a
+								>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h4 class="font-bold text-slate-900 mb-4">Contact</h4>
+						<ul class="space-y-3 text-slate-500 text-sm">
+							<li>hello@omnex.com.my</li>
+							<!-- <li>+60 123 456 789</li> -->
+							<!-- <li>Kuala Lumpur, Malaysia</li> -->
+						</ul>
+					</div>
+				</div>
+				<div
+					class="border-t border-slate-100 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-400"
+				>
+					<p>&copy; 2026 OMNEX. All rights reserved.</p>
+					<!-- <div class="flex gap-6">
+						<a href="#" class="hover:text-slate-600 transition-colors"
+							>Privacy Policy</a
+						>
+						<a href="#" class="hover:text-slate-600 transition-colors"
+							>Terms of Service</a
+						>
+					</div> -->
+				</div>
+			</div>
+		</footer>
+
+		<!-- Main JS logic -->
+		<script src="main.js"></script>
+	</body>
+</html>
