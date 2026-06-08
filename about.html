@@ -64,11 +64,19 @@
 						class="text-blue-600 font-semibold border-b-2 border-blue-600 pb-1"
 						>About</a
 					>
-					<!-- <a
-						href="index.html#contact"
-						class="px-5 py-2.5 bg-slate-900 text-white rounded-full hover:bg-blue-600 transition-all text-sm font-semibold"
-						Get in Touch</a
-					> -->
+					<a href="team.html" class="hover:text-blue-600 transition-colors"
+						>Team</a
+					>
+					<a
+						href="contact.html"
+						class="group relative inline-flex items-center justify-center px-5 py-2.5 bg-slate-900 text-white rounded-full text-sm font-semibold overflow-hidden transition-shadow shadow-sm hover:shadow-lg hover:shadow-blue-500/20"
+					>
+						<span
+							class="absolute inset-x-0 bottom-0 h-full bg-blue-600 translate-y-full transition-transform duration-300 ease-out group-hover:translate-y-0"
+						></span>
+						<span class="relative z-10">Contact Us</span>
+					</a
+					>
 				</div>
 
 				<!-- Mobile Menu Toggle -->
@@ -93,11 +101,14 @@
 				<a href="about.html" class="mobile-link py-2 text-blue-600 font-bold"
 					>About</a
 				>
-				<!-- <a
-					href="index.html#contact"
+				<a href="team.html" class="mobile-link py-2 text-slate-600 font-medium"
+					>Team</a
+				>
+				<a
+					href="contact.html"
 					class="mobile-link py-2 mt-2 bg-slate-900 text-white text-center rounded-full font-medium"
-					Get in Touch</a
-				> -->
+					>Contact Us</a
+				>
 			</div>
 		</nav>
 
@@ -153,6 +164,15 @@
 					business transformation, OMNEX serves as a reliable partner throughout
 					every stage of the business journey.
 				</p>
+			</div>
+			<div class="mt-12 flex justify-center">
+				<a
+					href="team.html"
+					class="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 text-white rounded-full font-semibold hover:bg-blue-600 transition-all"
+				>
+					Meet Our Team
+					<i data-lucide="arrow-right" class="w-4 h-4"></i>
+				</a>
 			</div>
 		</section>
 
@@ -612,8 +632,8 @@
 			class="bg-white border-t border-slate-100 pt-16 pb-8 px-6"
 		>
 			<div class="max-w-7xl mx-auto">
-				<div class="grid md:grid-cols-4 gap-12 mb-16 fade-in-section">
-					<div class="md:col-span-2">
+				<div class="grid gap-12 mb-16 fade-in-section md:grid-cols-[2fr_1fr_1fr_1fr]">
+					<div>
 						<img
 							src="assets/omnex_CMYK.png"
 							alt="OMNEX"
@@ -645,6 +665,26 @@
 							<li>
 								<a href="#" class="hover:text-blue-600 transition-colors"
 									>Business Strategy</a
+								>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h4 class="font-bold text-slate-900 mb-4">Company</h4>
+						<ul class="space-y-3 text-slate-500 text-sm">
+							<li>
+								<a href="about.html" class="hover:text-blue-600 transition-colors"
+									>About Us</a
+								>
+							</li>
+							<li>
+								<a href="team.html" class="hover:text-blue-600 transition-colors"
+									>Our Team</a
+								>
+							</li>
+							<li>
+								<a href="#contact" class="hover:text-blue-600 transition-colors"
+									>Get in Touch</a
 								>
 							</li>
 						</ul>
