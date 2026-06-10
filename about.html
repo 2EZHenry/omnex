@@ -20,14 +20,42 @@
 		</style>
 		<style>
 			.fade-in-section {
-				opacity: 1;
-				transform: translateY(0);
-				transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+				opacity: 0;
+				transform: translateY(18px) scale(0.99);
+				filter: blur(5px);
+				transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+					transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+					filter 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+				will-change: opacity, transform, filter;
 			}
 
 			.fade-in-section.is-visible {
 				opacity: 1;
+				transform: translateY(0) scale(1);
+				filter: blur(0);
+			}
+
+			.fade-in-section[data-stagger-children] > * {
+				opacity: 0;
+				transform: translateY(14px);
+				transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+					transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+				will-change: opacity, transform;
+			}
+
+			.fade-in-section[data-stagger-children].is-visible > * {
+				opacity: 1;
 				transform: translateY(0);
+			}
+
+			@media (prefers-reduced-motion: reduce) {
+				.fade-in-section,
+				.fade-in-section[data-stagger-children] > * {
+					opacity: 1;
+					transform: none;
+					transition: none;
+					will-change: auto;
+				}
 			}
 		</style>
 		<script src="https://unpkg.com/lucide@latest"></script>
@@ -35,98 +63,29 @@
 	<body
 		class="min-h-screen bg-slate-50 font-sans text-slate-800 selection:bg-sky-200 selection:text-sky-900 overflow-x-hidden"
 	>
-		<!-- Navigation -->
-		<nav
-			class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100"
-		>
-			<div
-				class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
-			>
-				<a href="index.html" class="block shrink-0" aria-label="OMNEX home">
-					<img
-						src="assets/omnex_CMYK.png"
-						alt="OMNEX"
-						class="h-7 w-auto object-contain md:h-9"
-					/>
-				</a>
-
-				<!-- Desktop Nav -->
-				<div
-					class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600"
-				>
-					<a
-						href="index.html#services"
-						class="hover:text-blue-600 transition-colors"
-						>Expertise</a
-					>
-					<a
-						href="about.html"
-						class="text-blue-600 font-semibold border-b-2 border-blue-600 pb-1"
-						>About</a
-					>
-					<a href="team.html" class="hover:text-blue-600 transition-colors"
-						>Team</a
-					>
-					<a
-						href="contact.html"
-						class="group relative inline-flex items-center justify-center px-5 py-2.5 bg-slate-900 text-white rounded-full text-sm font-semibold overflow-hidden transition-shadow shadow-sm hover:shadow-lg hover:shadow-blue-500/20"
-					>
-						<span
-							class="absolute inset-x-0 bottom-0 h-full bg-blue-600 translate-y-full transition-transform duration-300 ease-out group-hover:translate-y-0"
-						></span>
-						<span class="relative z-10">Contact Us</span>
-					</a
-					>
-				</div>
-
-				<!-- Mobile Menu Toggle -->
-				<button
-					id="mobile-menu-toggle"
-					class="md:hidden p-2 text-slate-600 focus:outline-none"
-				>
-					<span id="menu-icon-container"><i data-lucide="menu"></i></span>
-				</button>
-			</div>
-
-			<!-- Mobile Nav -->
-			<div
-				id="mobile-menu"
-				class="hidden bg-white border-b border-slate-100 px-6 py-4 flex flex-col gap-4 shadow-lg transition-all"
-			>
-				<a
-					href="index.html#services"
-					class="mobile-link py-2 text-slate-600 font-medium"
-					>Expertise</a
-				>
-				<a href="about.html" class="mobile-link py-2 text-blue-600 font-bold"
-					>About</a
-				>
-				<a href="team.html" class="mobile-link py-2 text-slate-600 font-medium"
-					>Team</a
-				>
-				<a
-					href="contact.html"
-					class="mobile-link py-2 mt-2 bg-slate-900 text-white text-center rounded-full font-medium"
-					>Contact Us</a
-				>
-			</div>
-		</nav>
+		<div id="site-header"></div>
 
 		<!-- Hero Section -->
-		<section class="pt-32 pb-16 bg-white px-6 border-b border-slate-100">
-			<div class="max-w-7xl mx-auto text-center fade-in-section">
+		<section
+			class="pt-32 pb-10 md:pb-16 bg-white px-6 border-b border-slate-100"
+		>
+			<div
+				class="max-w-7xl mx-auto text-center fade-in-section"
+				data-stagger-children="true"
+			>
 				<h1
-					class="text-4xl md:text-6xl font-heading font-bold text-slate-900 leading-[0.98] tracking-tight max-w-3xl mx-auto"
+					class="text-4xl sm:text-4xl md:text-6xl font-heading font-bold text-slate-900 leading-[0.98] tracking-tight max-w-3xl mx-auto"
 				>
-					One partner for<br />
+					One partner for <br class="hidden sm:block" />
 					<span
 						class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600"
 						>corporate, finance, HR,</span
-					><br />
+					>
+					<br class="hidden sm:block" />
 					and advisory support.
 				</h1>
 				<p
-					class="mt-6 text-lg md:text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto"
+					class="mt-6 sm:text-lg md:text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto"
 				>
 					OMNEX helps businesses simplify operations, strengthen compliance, and
 					scale with clearer processes, smarter systems, and practical advice.
@@ -135,9 +94,12 @@
 		</section>
 
 		<!-- Introduction text -->
-		<section class="py-20 px-6 fade-in-section">
+		<section
+			class="py-10 md:py-20 px-6 fade-in-section"
+			data-stagger-children="true"
+		>
 			<div
-				class="max-w-7xl mx-auto space-y-8 text-lg text-slate-600 leading-relaxed font-light"
+				class="max-w-7xl mx-auto space-y-8 md:text-lg text-slate-600 leading-relaxed font-light"
 			>
 				<p>
 					<strong>OMNEX Sdn. Bhd.</strong> is a modern business advisory and
@@ -177,9 +139,14 @@
 		</section>
 
 		<!-- Mission & Vision -->
-		<section class="py-20 bg-slate-900 text-white px-6">
-			<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 fade-in-section">
-				<div class="p-8 bg-slate-800/50 rounded-3xl border border-slate-700/50">
+		<section class="py-10 md:py-20 bg-slate-900 text-white px-6">
+			<div
+				class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 fade-in-section"
+				data-stagger-children="true"
+			>
+				<div
+					class="p-6 md:p-8 bg-slate-800/50 rounded-3xl border border-slate-700/50"
+				>
 					<div
 						class="w-12 h-12 bg-sky-500/20 rounded-xl flex items-center justify-center mb-6 text-sky-400"
 					>
@@ -192,7 +159,9 @@
 						and operational excellence.
 					</p>
 				</div>
-				<div class="p-8 bg-slate-800/50 rounded-3xl border border-slate-700/50">
+				<div
+					class="p-6 md:p-8 bg-slate-800/50 rounded-3xl border border-slate-700/50"
+				>
 					<div
 						class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-blue-400"
 					>
@@ -209,16 +178,16 @@
 		</section>
 
 		<!-- What Sets Us Apart -->
-		<section class="py-24 px-6 bg-white relative">
+		<section class="py-10 md:py-24 px-6 bg-white relative">
 			<div class="max-w-7xl mx-auto fade-in-section">
 				<h2
-					class="text-3xl md:text-4xl font-heading font-bold text-center mb-16 text-slate-900"
+					class="text-3xl md:text-4xl font-heading font-bold text-center mb-10 md:mb-16 text-slate-900"
 				>
 					What Sets Us Apart
 				</h2>
 				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 					<div
-						class="p-8 rounded-3xl border border-slate-100 hover:border-blue-100 hover:shadow-lg hover:shadow-blue-50 transition-all bg-slate-50 group"
+						class="p-6 md:p-8 rounded-3xl border border-slate-100 hover:border-blue-100 hover:shadow-lg hover:shadow-blue-50 transition-all bg-slate-50 group"
 					>
 						<div
 							class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform"
@@ -234,7 +203,7 @@
 						</p>
 					</div>
 					<div
-						class="p-8 rounded-3xl border border-slate-100 hover:border-blue-100 hover:shadow-lg hover:shadow-blue-50 transition-all bg-slate-50 group"
+						class="p-6 md:p-8 rounded-3xl border border-slate-100 hover:border-blue-100 hover:shadow-lg hover:shadow-blue-50 transition-all bg-slate-50 group"
 					>
 						<div
 							class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform"
@@ -250,7 +219,7 @@
 						</p>
 					</div>
 					<div
-						class="p-8 rounded-3xl border border-slate-100 hover:border-blue-100 hover:shadow-lg hover:shadow-blue-50 transition-all bg-slate-50 group"
+						class="p-6 md:p-8 rounded-3xl border border-slate-100 hover:border-blue-100 hover:shadow-lg hover:shadow-blue-50 transition-all bg-slate-50 group"
 					>
 						<div
 							class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform"
@@ -266,7 +235,7 @@
 						</p>
 					</div>
 					<div
-						class="p-8 rounded-3xl border border-slate-100 hover:border-blue-100 hover:shadow-lg hover:shadow-blue-50 transition-all bg-slate-50 group"
+						class="p-6 md:p-8 rounded-3xl border border-slate-100 hover:border-blue-100 hover:shadow-lg hover:shadow-blue-50 transition-all bg-slate-50 group"
 					>
 						<div
 							class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform"
@@ -282,7 +251,7 @@
 						</p>
 					</div>
 					<div
-						class="p-8 rounded-3xl border border-slate-100 hover:border-blue-100 hover:shadow-lg hover:shadow-blue-50 transition-all bg-slate-50 group"
+						class="p-6 md:p-8 rounded-3xl border border-slate-100 hover:border-blue-100 hover:shadow-lg hover:shadow-blue-50 transition-all bg-slate-50 group"
 					>
 						<div
 							class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform"
@@ -297,7 +266,7 @@
 						</p>
 					</div>
 					<div
-						class="p-8 rounded-3xl border border-slate-100 hover:border-blue-100 hover:shadow-lg hover:shadow-blue-50 transition-all bg-slate-50 group"
+						class="p-6 md:p-8 rounded-3xl border border-slate-100 hover:border-blue-100 hover:shadow-lg hover:shadow-blue-50 transition-all bg-slate-50 group"
 					>
 						<div
 							class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform"
@@ -315,10 +284,10 @@
 				</div>
 
 				<div
-					class="mt-16 p-8 md:p-12 bg-blue-50/50 rounded-3xl border border-blue-100 text-center"
+					class="mt-16 mb-8 md:mb-0 p-4 sm:p-8 md:p-12 bg-blue-50/50 rounded-3xl border border-blue-100 text-center"
 				>
 					<p
-						class="text-xl md:text-2xl text-slate-700 font-medium max-w-4xl mx-auto leading-relaxed"
+						class="text-lg sm:text-xl md:text-2xl text-slate-700 font-medium max-w-4xl mx-auto leading-relaxed"
 					>
 						"At OMNEX Sdn. Bhd., we are committed to helping businesses
 						transform challenges into opportunities and achieve lasting success
@@ -329,29 +298,29 @@
 		</section>
 
 		<!-- Services Detailed Breakdown -->
-		<section class="py-24 bg-slate-50 px-6 border-t border-slate-100">
+		<section class="py-10 md:py-24 bg-slate-50 px-6 border-t border-slate-100">
 			<div class="max-w-7xl mx-auto fade-in-section">
-				<div class="text-center mb-16">
+				<div class="text-center mb-8 md:mb-16">
 					<h2
 						class="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-4"
 					>
 						One-Stop Strategic Business Solutions
 					</h2>
-					<p class="text-lg text-slate-500 max-w-2xl mx-auto">
+					<p class="md:text-lg text-slate-500 max-w-2xl mx-auto">
 						Explore our specialized practices designed to drive efficiency.
 					</p>
 				</div>
 
 				<div class="grid md:grid-cols-2 gap-8">
 					<div
-						class="bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-sm"
+						class="bg-white p-6 sm:p-8 md:p-10 rounded-3xl border border-slate-200 shadow-sm"
 					>
 						<h3
-							class="text-2xl font-heading font-bold text-slate-900 mb-6 flex items-center gap-3"
+							class="text-xl md:text-2xl font-heading font-bold text-slate-900 mb-6 flex items-center gap-3"
 						>
 							Corporate &amp; Digital Transformation
 						</h3>
-						<ul class="space-y-4 text-slate-600">
+						<ul class="space-y-3 md:space-y-4 text-slate-600">
 							<li class="flex items-start gap-3">
 								<img
 									src="assets/icon_left.png"
@@ -420,14 +389,14 @@
 					</div>
 
 					<div
-						class="bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-sm"
+						class="bg-white p-6 sm:p-8 md:p-10 rounded-3xl border border-slate-200 shadow-sm"
 					>
 						<h3
 							class="text-2xl font-heading font-bold text-slate-900 mb-6 flex items-center gap-3"
 						>
 							Accounting &amp; Financial Management
 						</h3>
-						<ul class="space-y-4 text-slate-600">
+						<ul class="space-y-3 md:space-y-4 text-slate-600">
 							<li class="flex items-start gap-3">
 								<img
 									src="assets/icon_left.png"
@@ -488,14 +457,14 @@
 					</div>
 
 					<div
-						class="bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-sm"
+						class="bg-white p-6 sm:p-8 md:p-10 rounded-3xl border border-slate-200 shadow-sm"
 					>
 						<h3
 							class="text-2xl font-heading font-bold text-slate-900 mb-6 flex items-center gap-3"
 						>
 							Human Capital &amp; Payroll Solutions
 						</h3>
-						<ul class="space-y-4 text-slate-600">
+						<ul class="space-y-3 md:space-y-4 text-slate-600">
 							<li class="flex items-start gap-3">
 								<img
 									src="assets/icon_left.png"
@@ -548,14 +517,14 @@
 					</div>
 
 					<div
-						class="bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-sm"
+						class="bg-white p-6 sm:p-8 md:p-10 rounded-3xl border border-slate-200 shadow-sm"
 					>
 						<h3
 							class="text-2xl font-heading font-bold text-slate-900 mb-6 flex items-center gap-3"
 						>
 							Business Growth &amp; Governance Advisory
 						</h3>
-						<ul class="space-y-4 text-slate-600">
+						<ul class="space-y-3 md:space-y-4 text-slate-600">
 							<li class="flex items-start gap-3">
 								<img
 									src="assets/icon_left.png"
@@ -626,93 +595,7 @@
 			</div>
 		</section>
 
-		<!-- Footer -->
-		<footer
-			id="contact"
-			class="bg-white border-t border-slate-100 pt-16 pb-8 px-6"
-		>
-			<div class="max-w-7xl mx-auto">
-				<div class="grid gap-12 mb-16 fade-in-section md:grid-cols-[2fr_1fr_1fr_1fr]">
-					<div>
-						<img
-							src="assets/omnex_CMYK.png"
-							alt="OMNEX"
-							class="mb-6 h-10 w-auto object-contain"
-						/>
-						<p class="text-slate-500 max-w-sm">
-							Your one-stop partner for corporate services, strategic growth,
-							and functional excellence.
-						</p>
-					</div>
-					<div>
-						<h4 class="font-bold text-slate-900 mb-4">Solutions</h4>
-						<ul class="space-y-3 text-slate-500 text-sm">
-							<li>
-								<a href="#" class="hover:text-blue-600 transition-colors"
-									>Corporate Advisory</a
-								>
-							</li>
-							<li>
-								<a href="#" class="hover:text-blue-600 transition-colors"
-									>Accounting & Finance</a
-								>
-							</li>
-							<li>
-								<a href="#" class="hover:text-blue-600 transition-colors"
-									>HR & Payroll</a
-								>
-							</li>
-							<li>
-								<a href="#" class="hover:text-blue-600 transition-colors"
-									>Business Strategy</a
-								>
-							</li>
-						</ul>
-					</div>
-					<div>
-						<h4 class="font-bold text-slate-900 mb-4">Company</h4>
-						<ul class="space-y-3 text-slate-500 text-sm">
-							<li>
-								<a href="about.html" class="hover:text-blue-600 transition-colors"
-									>About Us</a
-								>
-							</li>
-							<li>
-								<a href="team.html" class="hover:text-blue-600 transition-colors"
-									>Our Team</a
-								>
-							</li>
-							<li>
-								<a href="#contact" class="hover:text-blue-600 transition-colors"
-									>Get in Touch</a
-								>
-							</li>
-						</ul>
-					</div>
-					<div>
-						<h4 class="font-bold text-slate-900 mb-4">Contact</h4>
-						<ul class="space-y-3 text-slate-500 text-sm">
-							<li>hello@omnex.com.my</li>
-							<!-- <li>+60 123 456 789</li> -->
-							<!-- <li>Kuala Lumpur, Malaysia</li> -->
-						</ul>
-					</div>
-				</div>
-				<div
-					class="border-t border-slate-100 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-400"
-				>
-					<p>&copy; 2026 OMNEX. All rights reserved.</p>
-					<!-- <div class="flex gap-6">
-						<a href="#" class="hover:text-slate-600 transition-colors"
-							>Privacy Policy</a
-						>
-						<a href="#" class="hover:text-slate-600 transition-colors"
-							>Terms of Service</a
-						>
-					</div> -->
-				</div>
-			</div>
-		</footer>
+		<div id="site-footer"></div>
 
 		<!-- Main JS logic -->
 		<script src="main.js"></script>
